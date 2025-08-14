@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(90deg, orange, white, green);
+  animation: bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff9933;
+  text-shadow: 2px 2px 4px #000;
+  animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px #ff9933, 0 0 20px #138808; }
+  to { text-shadow: 0 0 20px #ff9933, 0 0 40px #138808; }
+}
+
+.special {
+  font-size: 2em;
+  color: #138808;
+  margin-top: -10px;
+}
+
+.name {
+  color: #ff9933;
+  font-weight: bold;
+  animation: nameGlow 1.5s infinite alternate;
+}
+
+@keyframes nameGlow {
+  from { text-shadow: 0 0 5px #ff9933; }
+  to { text-shadow: 0 0 20px #138808; }
+}
+
+/* Flag animation */
+.flag {
+  width: 300px;
+  margin: 30px auto;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Fireworks Canvas */
+#fireworksCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
